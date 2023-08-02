@@ -14,13 +14,8 @@ class _SplashScreenState extends State<SplashScreen> {
   final SplashController splashController = Get.put(SplashController());
 
   @override
-  void initState() {
-    super.initState();
-    splashController.checkLoginStatus();
-  }
-
-  @override
   Widget build(BuildContext context) {
+    splashController.navigationStatus();
     return const Scaffold(
       backgroundColor: Colors.white,
       body: Center(child: BackgroundConstant()),
